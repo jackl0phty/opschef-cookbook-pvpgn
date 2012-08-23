@@ -1,0 +1,8 @@
+{
+  "id":			"pvpgn",
+  "Comment":	"pvpgn service account",
+  "uid":		"8000",
+  "groups":		"pvpgn",
+  "home":		"/var/files",
+  "shell":		"/bin/bash"
+}
