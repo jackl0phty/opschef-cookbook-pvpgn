@@ -6,7 +6,7 @@
 #
 
 # Install pvpgn package
-deb_packages = case node[:platform]
+deb_packages = case node['platform']
   when "ubuntu","debian"
     %w{ pvpgn }
   end
@@ -18,12 +18,12 @@ deb_packages.each do |pkg|
 end
 
 # Install mysql db
-if node[:pvpgn][:db_type] == "mysql"
+if node['pvpgn']['db_type'] == "mysql"
 	include_recipe "pvpgn::mysql"
 end
 
 # Install PostgreSQL DB
-if node[:pvpgn][:db_type] == "pgsql"
+if node['pvpgn']['db_type'] == "pgsql"
     include_recipe "pvpgn::postgresql"
 end
 
